@@ -82,7 +82,15 @@ h2 {
   align-items: flex-start;
   transition: transform 0.12s;
 }
-
+.profile-img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
 .project-card:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 4px 24px rgba(35, 41, 70, 0.13);
