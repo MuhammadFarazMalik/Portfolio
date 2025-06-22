@@ -1,21 +1,4 @@
-@media only screen and (orientation: portrait) {
-  .landscape-message {
-    display: flex;
-  }
-}
-.landscape-message {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: #fff;
-  color: #333;
-  z-index: 9999;
-  text-align: center;
-  padding: 2em;
-  font-size: 1.5em;
-  justify-content: center;
-  align-items: center;
-}
+
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
