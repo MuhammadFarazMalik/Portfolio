@@ -1,26 +1,23 @@
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;        /* Stack elements vertically */
-    align-items: center;           /* Center items */
-    text-align: center;
-  }
-  nav {
-    width: 100%;
+@media only screen and (orientation: portrait) {
+  .landscape-message {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;                     /* Spacing between nav items */
-  }
-  .profile-pic {
-    width: 80px;                   /* Smaller profile picture */
-    height: 80px;
-    margin-bottom: 10px;
-  }
-  .profile-name {
-    font-size: 1.2em;              /* Slightly smaller text */
-    margin-bottom: 10px;
   }
 }
+.landscape-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  color: #333;
+  z-index: 9999;
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+}
+
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
