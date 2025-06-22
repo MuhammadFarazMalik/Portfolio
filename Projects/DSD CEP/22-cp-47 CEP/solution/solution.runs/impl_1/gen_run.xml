@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1746432225">
+  <File Type="PA-TCL" Name="mips_processor.tcl"/>
+  <File Type="BITSTR-BMM" Name="mips_processor_bd.bmm"/>
+  <File Type="REPORTS-TCL" Name="mips_processor_reports.tcl"/>
+  <File Type="OPT-DCP" Name="mips_processor_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="mips_processor.hwdef"/>
+  <File Type="BG-BGN" Name="mips_processor.bgn"/>
+  <File Type="PWROPT-DCP" Name="mips_processor_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="mips_processor_placed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="mips_processor_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="mips_processor_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="mips_processor.bin"/>
+  <File Type="PHYSOPT-DCP" Name="mips_processor_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="mips_processor.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="mips_processor_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="mips_processor_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="mips_processor_routed_bb.dcp"/>
+  <File Type="BITSTR-LTX" Name="mips_processor.ltx"/>
+  <File Type="BITSTR-MMI" Name="mips_processor.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="mips_processor.sysdef"/>
+  <File Type="ROUTE-TIMING-PB" Name="mips_processor_timing_summary_routed.pb"/>
+  <File Type="RDI-RDI" Name="mips_processor.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="mips_processor_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mips_processor_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="mips_processor.bit"/>
+  <File Type="BITSTR-RBT" Name="mips_processor.rbt"/>
+  <File Type="BITSTR-NKY" Name="mips_processor.nky"/>
+  <File Type="BG-DRC" Name="mips_processor.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/alu.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/control_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/data_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/instruction_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/register_file.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seven_segment_display.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mips_processor.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="mips_processor"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/mips_processor.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,18 @@
+
+        Duty Card
+        =========
+        Department: Computer Science
+        USN: CS09269998
+        Name: uvuvu
+        Gender: Male
+        Date of Birth: 1998-01-01
+        Class ID: CS5A
+        User ID: 87
+        
+        Fee Details:
+        Amount Due: 50000.00
+        Amount Paid: 0.00
+        Due Date: 2025-05-04
+        Status: Pending
+        
+        

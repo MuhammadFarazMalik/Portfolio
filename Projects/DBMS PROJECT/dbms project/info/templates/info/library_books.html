@@ -1,0 +1,67 @@
+{% extends 'info/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Library Books</h2>
+
+    {% if user.is_student %}
+        <h3>Your Current Loans</h3>
+        {% if user_loans %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Issue Date</th>
+                        <th>Due Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for loan in user_loans %}
+                    <tr>
+                        <td>{{ loan.book.title }}</td>
+                        <td>{{ loan.issue_date }}</td>
+                        <td>{{ loan.issue_date|date:"Y-m-d" }}</td>
+                        <td>
+                            <a href="{% url 'return_book' loan.id %}" class="btn btn-warning btn-sm">Return Book</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>You have no books currently borrowed.</p>
+        {% endif %}
+
+        <h3>Available Books</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Book ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                <tr>
+                    <td>{{ book.id }}</td>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.isbn }}</td>
+                    <td>
+                        {% if book.available %}
+                        <a href="{% url 'borrow_book' book.id %}" class="btn btn-primary btn-sm">Borrow</a>
+                        {% else %}
+                        <button class="btn btn-secondary btn-sm" disabled>Not Available</button>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</div>
+{% endblock %}

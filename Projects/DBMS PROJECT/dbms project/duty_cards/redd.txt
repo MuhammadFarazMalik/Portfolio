@@ -1,0 +1,11 @@
+
+        Duty Card
+        =========
+        Department: Computer Science
+        USN: redd
+        Name: redd
+        Gender: Male
+        Date of Birth: 1998-01-01
+        Class ID: CS3B
+        User ID: 81
+        

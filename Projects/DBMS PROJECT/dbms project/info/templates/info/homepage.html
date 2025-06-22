@@ -1,0 +1,22 @@
+{% extends 'info/base.html' %}
+{% block content %}
+{# ...existing code... #}
+<div class="btn-group btn-group-justified">
+    <div class="btn-group">
+        <a href="{% url 'timetable' class_id=user.student.class_id.id %}" class="btn btn-primary">TimeTable</a>
+    </div>
+    <div class="btn-group">
+        <a href="{% url 'attendance' stud_id=user.student.USN %}" class="btn btn-primary">Attendance</a>
+    </div>
+    <div class="btn-group">
+        <a href="{% url 'marks_list' stud_id=user.student.USN %}" class="btn btn-primary">Marks</a>
+    </div>
+    <div class="btn-group">
+        <a href="{% url 'library_books' %}" class="btn btn-primary">Library</a>
+    </div>
+    <div class="btn-group">
+        <a href="{% url 'degree_status' %}" class="btn btn-primary">Degree Status</a>
+    </div>
+</div>
+{# ...existing code... #}
+{% endblock %}

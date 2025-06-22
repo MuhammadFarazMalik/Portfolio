@@ -1,0 +1,84 @@
+{% extends 'info/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Degree Clearance Status</h2>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4>Student Information</h4>
+            <p><strong>Name:</strong> {{ student.name }}</p>
+            <p><strong>USN:</strong> {{ student.USN }}</p>
+            <p><strong>Department:</strong> {{ student.class_id.dept.name }}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header {% if clearance.is_fee_cleared %}bg-success{% else %}bg-danger{% endif %} text-white">
+                    <h5 class="mb-0">Fee Status</h5>
+                </div>
+                <div class="card-body">
+                    {% if pending_fees %}
+                        <p class="text-danger">Pending Fees:</p>
+                        <ul>
+                        {% for fee in pending_fees %}
+                            <li>Semester {{ fee.semester }}: Rs. {{ fee.amount_due }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-success">All fees cleared!</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header {% if clearance.is_fine_cleared %}bg-success{% else %}bg-danger{% endif %} text-white">
+                    <h5 class="mb-0">Fine Status</h5>
+                </div>
+                <div class="card-body">
+                    {% if pending_fines %}
+                        <p class="text-danger">Pending Fines:</p>
+                        <ul>
+                        {% for fine in pending_fines %}
+                            <li>{{ fine.reason }}: Rs. {{ fine.amount }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-success">No pending fines!</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header {% if clearance.is_course_completed %}bg-success{% else %}bg-warning{% endif %} text-white">
+            <h5 class="mb-0">Course Completion Status</h5>
+        </div>
+        <div class="card-body">
+            <p>Completed Courses: {{ courses_completed }} / {{ total_courses }}</p>
+            {% if not clearance.is_course_completed %}
+                <p class="text-warning">All courses must be completed with passing grades to be eligible for degree.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header {% if clearance.is_degree_awarded %}bg-success{% else %}bg-secondary{% endif %} text-white">
+            <h4 class="mb-0">Degree Status</h4>
+        </div>
+        <div class="card-body">
+            {% if clearance.is_degree_awarded %}
+                <h5 class="text-success">Congratulations! You are eligible for degree award.</h5>
+            {% else %}
+                <h5 class="text-danger">Degree cannot be awarded yet.</h5>
+                <p>Please clear all pending requirements highlighted above.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

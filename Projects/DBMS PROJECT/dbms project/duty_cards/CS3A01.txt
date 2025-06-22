@@ -1,0 +1,11 @@
+
+        Duty Card
+        =========
+        Department: Computer Science
+        USN: CS3A01
+        Name: Anna
+        Gender: Female
+        Date of Birth: 1998-01-01
+        Class ID: CS3A
+        User ID: 40
+        
