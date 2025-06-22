@@ -1,3 +1,26 @@
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;        /* Stack elements vertically */
+    align-items: center;           /* Center items */
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;                     /* Spacing between nav items */
+  }
+  .profile-pic {
+    width: 80px;                   /* Smaller profile picture */
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  .profile-name {
+    font-size: 1.2em;              /* Slightly smaller text */
+    margin-bottom: 10px;
+  }
+}
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
