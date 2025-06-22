@@ -17,7 +17,6 @@
   align-items: center;
 }
 
-
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -97,17 +96,12 @@ header .container {
   justify-content: center;
 }
 
-header h1 {
-  margin: 0 0 18px 0;
-  font-size: 2.8em;
-  letter-spacing: 1px;
-  font-weight: 700;
-  color: #4fc3f7;
-}
-
+/* Responsive, circular profile image fix */
 .profile-img {
-  width: 260px;
-  height: 260px;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1/1;   /* keeps image perfectly square */
+  height: auto;
   object-fit: cover;
   border-radius: 50%;
   display: block;
@@ -117,7 +111,38 @@ header h1 {
   image-rendering: auto;
   border: 6px solid #232526;
 }
-
+@media (max-width: 800px) {
+  .profile-img {
+    margin: 0 0 24px 0;
+    width: 90vw;
+    max-width: 320px;
+    height: auto;
+  }
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .header-content {
+    align-items: center;
+    text-align: center;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .profile-img {
+    max-width: 150px;
+  }
+  .container {
+    width: 98%;
+    padding: 8px 0;
+  }
+}
 .container {
   width: 92%;
   max-width: 960px;
@@ -201,7 +226,6 @@ h2 {
   transition: background 0.17s, color 0.17s;
   cursor: pointer;
 }
-
 .btn:hover {
   background: #232526;
   color: #4fc3f7;
@@ -223,7 +247,6 @@ h2 {
   list-style: none;
   padding: 0;
 }
-
 .skills-list li {
   background: #4fc3f7;
   color: #232526;
@@ -271,7 +294,6 @@ footer {
   box-shadow: 0 2px 12px rgba(79,195,247,0.13);
   transition: background 0.2s, color 0.2s;
 }
-
 #topBtn:hover {
   background-color: #232526;
   color: #4fc3f7;
@@ -290,21 +312,4 @@ footer {
   .container { width: 98%; }
   .projects-grid { grid-template-columns: 1fr; }
   .contact-links { flex-direction: column; }
-}
-
-@media (max-width: 800px) {
-  header .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .profile-img {
-    margin: 0 0 24px 0;
-    width: 90vw;
-    max-width: 320px;
-    height: auto;
-  }
-  .header-content {
-    align-items: center;
-    text-align: center;
-  }
 }
