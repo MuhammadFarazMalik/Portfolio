@@ -1,17 +1,5 @@
 
-// Orientation check and toggle .landscape-message
-function handleOrientation() {
-  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
-  const landscapeMsg = document.querySelector(".landscape-message");
-  if (landscapeMsg) {
-    landscapeMsg.style.display = isPortrait ? "flex" : "none";
-  }
-}
 
-// Run on load and on orientation change/resize
-window.addEventListener("DOMContentLoaded", handleOrientation);
-window.addEventListener("resize", handleOrientation);
-window.addEventListener("orientationchange", handleOrientation);
 // Smooth scroll for nav links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
