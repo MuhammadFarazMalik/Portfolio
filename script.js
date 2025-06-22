@@ -1,3 +1,8 @@
+@media only screen and (orientation: portrait) {
+  .landscape-message {
+    display: flex;
+  }
+}
 // Smooth scroll for nav links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
