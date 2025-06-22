@@ -1,5 +1,5 @@
 # Find detailed reports of working and functionality in the attached report a quick overview of the project is given below.
-##Summary:
+## Summary:
 The University Management System (UMS) is an integrated, web-based platform developed to 
 enhance the efficiency and effectiveness of university operations by automating key administrative, 
 academic, and financial processes. The system provides a centralized database and user-friendly 
