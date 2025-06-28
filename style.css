@@ -291,6 +291,27 @@ footer {
   letter-spacing: 0.01em;
 }
 
+@media (max-width: 768px) {
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .proj-btns {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
 
 nav.main-nav {
   margin-left: 70px; /* Move nav bar right to clear profile image */
