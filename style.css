@@ -291,26 +291,10 @@ footer {
   letter-spacing: 0.01em;
 }
 
-@media screen and (max-width: 768px){
-  .projects-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .proj-btns {
-    margin-top: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+@media (max-width: 600px) {
+  .container { width: 98%; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .contact-links { flex-direction: column; }
 }
 
 nav.main-nav {
