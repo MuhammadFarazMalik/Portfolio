@@ -296,3 +296,6 @@ footer {
   .projects-grid { grid-template-columns: 1fr; }
   .contact-links { flex-direction: column; }
 }
+nav.main-nav {
+  margin-left: 70px; /* Move nav bar right to clear profile image */
+}
