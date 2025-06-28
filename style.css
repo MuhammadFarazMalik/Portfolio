@@ -334,6 +334,12 @@ nav.main-nav {
     margin-top: auto !important;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 360px; /* Adjust this to match your header height */
+}
+
 section[id]::before {
   content: "";
   display: block;
