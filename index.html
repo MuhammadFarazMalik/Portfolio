@@ -25,9 +25,11 @@
 
     </div>
   </div>
+<!-- AOS Animation Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </header>
   
-  <section id="about" class="about">
+  <section id="about" class="about" data-aos="fade-up">
     <div class="container">
       <h2>About Me</h2>
       <p>
@@ -36,7 +38,7 @@
     </div>
   </section>
   
-  <section id="projects">
+  <section id="projects" data-aos="fade-up">
     <div class="container">
       <h2>Projects</h2>
       <div class="projects-grid">
@@ -143,7 +145,7 @@
 </section>
 
   
-  <section id="education">
+  <section id="education" data-aos="fade-up">
     <div class="container">
       <h2>Education</h2>
       <div class="education-item">
@@ -155,7 +157,7 @@
     </div>
   </section>
   
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <div class="container">
       <h2>Contact</h2>
       <div class="contact-links">
@@ -224,5 +226,14 @@
       };
     }
   </script>
+ </script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: false
+  });
+</script>
+
 </body>
 </html>
