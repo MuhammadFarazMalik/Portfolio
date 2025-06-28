@@ -334,6 +334,13 @@ nav.main-nav {
     margin-top: auto !important;
   }
 }
+section[id]::before {
+  content: "";
+  display: block;
+  height: 60px;
+  margin-top: -100px;
+  visibility: hidden;
+}
 
 
 
