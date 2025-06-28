@@ -1,11 +1,27 @@
 
 
+
+
+.landscape-message {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  color: #333;
+  z-index: 9999;
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(120deg, #232526 0%, #414345 100%);
-  color: #e6e6e6;
+  color: #f0f0f0;
 }
 
 header {
@@ -118,6 +134,17 @@ header .container {
   }
 }
 
+.container {
+  width: 92%;
+  max-width: 960px;
+  margin: auto;
+  padding: 16px 0;
+}
+
+.about, section {
+  margin: 60px 0 0 0;
+}
+
 h2 {
   margin: 0 0 12px 0;
   font-size: 1.6em;
@@ -164,7 +191,7 @@ h2 {
   font-size: 1em;
   min-height: 48px;
   color: #e6e6e6;
-   flex-grow: 1;
+  flex-grow: 1;
 }
 
 .proj-btns {
@@ -274,15 +301,45 @@ footer {
   letter-spacing: 0.01em;
 }
 
-@media (max-width: 600px) {
-  .container { width: 98%; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .contact-links { flex-direction: column; }
-}
+
 
 nav.main-nav {
   margin-left: 70px; /* Move nav bar right to clear profile image */
 }
+
+@media (max-width: 768px) {
+  .projects-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .project-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 360px !important;
+  }
+
+  .project-card p {
+    flex-grow: 1 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .proj-btns {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    margin-top: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 360px; /* Adjust this to match your header height */
+}
+
 section[id]::before {
   content: "";
   display: block;
@@ -290,3 +347,5 @@ section[id]::before {
   margin-top: -100px;
   visibility: hidden;
 }
+
+
