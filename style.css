@@ -117,25 +117,6 @@ header .container {
     gap: 8px;
   }
 }
-@media (max-width: 600px) {
-  .profile-img {
-    max-width: 150px;
-  }
-  .container {
-    width: 98%;
-    padding: 8px 0;
-  }
-}
-.container {
-  width: 92%;
-  max-width: 960px;
-  margin: auto;
-  padding: 16px 0;
-}
-
-.about, section {
-  margin: 60px 0 0 0;
-}
 
 h2 {
   margin: 0 0 12px 0;
@@ -160,6 +141,7 @@ h2 {
   padding: 22px 20px 18px 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   transition: transform 0.12s, box-shadow 0.12s;
   color: #e6e6e6;
@@ -182,6 +164,7 @@ h2 {
   font-size: 1em;
   min-height: 48px;
   color: #e6e6e6;
+   flex-grow: 1;
 }
 
 .proj-btns {
