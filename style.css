@@ -112,10 +112,10 @@ header .container {
 }
 @media (max-width: 800px) {
   .profile-img {
-    margin: 0 0 24px 0;
-    width: 90vw;
-    max-width: 320px;
-    height: auto;
+    margin: 0 auto 24px auto;
+    width: 80vw;
+    max-width: 280px;
+    display: block;
   }
   header .container {
     flex-direction: column;
@@ -125,15 +125,40 @@ header .container {
   .header-content {
     align-items: center;
     text-align: center;
+    width: 100%;
+    flex: unset !important; /* <-- THIS FIXES THE LEFT ALIGN BUG */
+  }
+  nav.main-nav {
+    width: 90vw;
+    max-width: 340px;
+    margin: 20px auto 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: transparent;
   }
   .main-nav ul {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 14px;
     width: 100%;
-    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
+  .main-nav ul li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .main-nav ul li a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0;
   }
 }
-
 .container {
   width: 92%;
   max-width: 960px;
@@ -308,30 +333,36 @@ nav.main-nav {
 }
 
 @media (max-width: 768px) {
-  .projects-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 24px !important;
+  /* Center the nav container by making it full width and removing max-width */
+  nav.main-nav {
+    width: 100%;
+    max-width: none;
+    margin: 20px auto 0 auto; /* Center horizontally with auto margins */
+    display: flex;
+    justify-content: center; /* Center the ul inside the nav */
+    padding: 0;
   }
 
-  .project-card {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    min-height: 360px !important;
+  /* Make the ul display as inline-block to help with centering (optional) */
+  nav.main-nav ul {
+    display: inline-block;
+    flex-direction: column; /* If you want a vertical menu */
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
-  .project-card p {
-    flex-grow: 1 !important;
-    margin-bottom: 12px !important;
+  /* Style each list item to take full width and center text */
+  nav.main-nav ul li {
+    width: 100%;
   }
 
-  .proj-btns {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-    gap: 10px !important;
-    margin-top: auto !important;
+  /* Center the anchor text and make button-like appearance on mobile */
+  nav.main-nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
   }
 }
 
@@ -347,6 +378,5 @@ section[id]::before {
   margin-top: -100px;
   visibility: hidden;
 }
-
 
 
