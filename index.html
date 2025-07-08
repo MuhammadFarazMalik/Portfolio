@@ -178,56 +178,7 @@
   <button id="topBtn" title="Go to top">↑</button>
   <script src="script.js"></script>
 
-  <!-- MOBILE WARNING (fully visible, with close button, mobile ONLY) -->
-  <div id="mobile-warning" style="
-    display:none;
-    position:fixed;
-    z-index:9999;
-    top:0;
-    left:0;
-    width:100vw;
-    height:100vh;
-    background:rgba(34,37,38,0.97);
-    color:#4fc3f7;
-    text-align:center;
-    padding:0;
-    box-sizing:border-box;">
-    <button id="close-mobile-warning" style="
-      position:absolute;
-      top:14px;
-      right:18px;
-      background:none;
-      border:none;
-      color:#4fc3f7;
-      font-size:2.3em;
-      font-weight:bold;
-      cursor:pointer;
-      z-index:10000;
-      line-height:1;
-    " aria-label="Close">&times;</button>
-    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;padding:36px 12px 12px 12px;box-sizing:border-box;">
-      <strong style="font-size:1.2em;">This website is designed for laptop or desktop browsers.</strong>
-      <div style="margin:24px 0 0 0; font-size:1em;">
-        For the best experience, please switch to "Desktop Site" mode in your browser.
-      </div>
-    </div>
-  </div>
-  <script>
-    function isMobileDevice() {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-    if (isMobileDevice()) {
-      document.getElementById('mobile-warning').style.display = 'block';
-      document.body.style.overflow = 'hidden';
-      // Add close button functionality
-      document.getElementById('close-mobile-warning').onclick = function() {
-        document.getElementById('mobile-warning').style.display = 'none';
-        document.body.style.overflow = '';
-      };
-    }
-  </script>
- </script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
     duration: 800,
