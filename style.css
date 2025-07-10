@@ -378,5 +378,14 @@ section[id]::before {
   margin-top: -100px;
   visibility: hidden;
 }
+@media (max-width: 800px) {
+  nav.main-nav ul li {
+    margin-bottom: 14px; 
+  }
+
+  nav.main-nav ul li:last-child {
+    margin-bottom: 0;
+  }
+}
 
 
